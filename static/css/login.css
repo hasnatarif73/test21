@@ -1,0 +1,184 @@
+/* Ocean Background Animation */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0d1b2a;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.ocean-container {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.depth-layer {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0,70,130,0.3) 0%, transparent 80%);
+    animation: float 15s infinite linear;
+}
+
+.depth-layer:nth-child(1) {
+    animation-duration: 25s;
+    background: radial-gradient(circle, rgba(0,100,200,0.2) 0%, transparent 80%);
+}
+
+.depth-layer:nth-child(2) {
+    animation-duration: 35s;
+    background: radial-gradient(circle, rgba(0,150,255,0.1) 0%, transparent 80%);
+}
+
+.depth-layer:nth-child(3) {
+    animation-duration: 45s;
+}
+
+@keyframes float {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    100% { transform: translate(-25%, -25%) rotate(360deg); }
+}
+
+/* Login Card */
+.login-container {
+    background: rgba(255,255,255,0.05);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    width: 350px;
+    color: white;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.brand-logo {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+    background-clip: text; /* Standard property */
+    -webkit-background-clip: text; /* For Safari/Chrome */
+    color: transparent; /* Needed so text shows gradient */
+    -webkit-text-fill-color: transparent; /* Extra Safari fix */
+}
+
+
+.login-title {
+    margin: 10px 0 5px;
+    font-size: 1.8rem;
+}
+
+.login-subtitle {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-container {
+    position: relative;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.form-input::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+/* Button */
+.login-button {
+    margin-top: 10px;
+    width: 100%;
+    background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.login-button:hover {
+    transform: scale(1.03);
+}
+
+.button-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Spinner and Check */
+.loading-spinner {
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top: 2px solid white;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    animation: spin 1s linear infinite;
+    display: none;
+}
+
+.success-check {
+    width: 16px;
+    height: 16px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: none;
+    transform: rotate(45deg);
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+.additional-options {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.forgot-password {
+    color: #00d2ff;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.alert {
+    background: rgba(255,0,0,0.1);
+    color: #ff4d4d;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+}

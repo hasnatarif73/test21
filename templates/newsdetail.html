@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content  %}
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <h2>{{newsDetails.news_title}}</h2>
+        
+        <p>{{newsDetails.news_desc | safe }}</p>
+       <div class"col-12">
+        {% if newsDetails.news_image != NULL %}
+        <img src="/media/{{newsDetails.news_image}}"  class="img-fluid"/>
+        {% endif %}
+        </div>
+    </main>
+    {% endblock  %}
+   

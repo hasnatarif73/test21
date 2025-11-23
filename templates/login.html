@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | One Step To Success</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+
+    <!-- Dynamic Ocean Background -->
+    <div class="ocean-container">
+        <div class="depth-layer"></div>
+        <div class="depth-layer"></div>
+        <div class="depth-layer"></div>
+    </div>
+
+    <!-- Login Form Container -->
+    <div class="login-container">
+        
+        <!-- Error Alert -->
+        {% if error %}
+        <div class="alert alert-danger" role="alert" style="text-align:center; margin-bottom:20px;">
+            {{ error }}
+        </div>
+        {% endif %}
+
+        <!-- Header -->
+        <div class="login-header">
+            <div class="brand-logo">JOBIFY</div>
+            <h1 class="login-title">Welcome Back</h1>
+            <p class="login-subtitle">Sign in to continue your journey</p>
+        </div>
+
+        <!-- Django Login Form -->
+        <form class="login-form" id="loginForm" method="POST">
+            {% csrf_token %}
+
+            <!-- Username -->
+            <div class="form-group">
+                <label class="form-label" for="username">Username</label>
+                <div class="input-container">
+                    <input type="text" name="username" id="username" class="form-input" placeholder="Enter your username" required>
+                </div>
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+                <label class="form-label" for="password">Password</label>
+                <div class="input-container">
+                    <input type="password" name="password" id="password" class="form-input" placeholder="Enter your password" required>
+                </div>
+            </div>
+
+            <!-- Sign In Button -->
+            <button type="submit" class="login-button">
+                <div class="button-content">
+                    <div class="loading-spinner"></div>
+                    <div class="success-check"></div>
+                    <span class="button-text">Sign In</span>
+                </div>
+            </button>
+
+            <!-- Sign Up Link -->
+            <div class="additional-options">
+                <a href="{% url 'signup' %}" class="forgot-password">Don't have an account? Sign up</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="{% static 'java/login.js' %}"></script>
+</body>
+</html>

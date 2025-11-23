@@ -1,0 +1,45 @@
+.slider {
+    position: relative;
+    width: 100vw;  /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-image {
+     width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    flex-shrink: 0;
+    display: block;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 2rem;
+    transform: translateY(-50%);
+    z-index: 1; /* Ensure buttons are above other content */
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+.carousel-item{
+   transition: transform .1s ease-in-out !important;
+}
+
+

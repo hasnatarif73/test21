@@ -1,0 +1,121 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+.site-header {
+    background-color: #1e1e2f;
+    padding: 20px 0;
+}
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.logo {
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+}
+.site-nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.site-nav a:hover {
+    color: #00bfff;
+}
+.site-nav a.active {
+    color: red;
+    font-weight: bold;
+    border-bottom: 2px solid #ff6600;
+}
+
+/* Main */
+.main-content {
+    flex: 1;
+    text-align: center;
+    padding: 0px 0px;
+}
+.main-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+button {
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+button:hover {
+    background-color: #0056b3;
+}
+#output {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #1e1e2f;
+    color: #ccc;
+    padding: 40px 0px;
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.footer-col {
+    flex: 1 1 250px;
+    margin: 10px;
+}
+.footer-col h4 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+.footer-col ul {
+    list-style: none;
+    padding-left: 0;
+}
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+.footer-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-col ul li a:hover {
+    color: #00bfff;
+}
+.footer-bottom {
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    border-top: 1px solid #444;
+}
+header.active {
+    background-color: #007bff;
+}
